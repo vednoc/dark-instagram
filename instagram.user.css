@@ -451,4 +451,8 @@
     background: var(--shadow) !important; }
   ::-webkit-scrollbar-thumb {
     background: var(--darker) !important; }
+
+  [role="dialog"], .Fzijm {
+    display: none !important;
+  }
 }
