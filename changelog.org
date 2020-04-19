@@ -1,0 +1,5 @@
+#+STARTUP: nofold
+
+* Changelog
+** 2.0.0 [2020-04-19]
+Rewritten everything from the scratch.
