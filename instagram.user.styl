@@ -13,6 +13,7 @@
 @var text     ui_font    'Custom UI font' '"font_name"'
 @var text     emoji_font 'Custom emoji font' '"font_name"'
 @var checkbox ic_invert  'Enable icon inversion in dark mode' 1
+@var checkbox enable_la  'Enable removal of logged-out annoyances' 1
 @var checkbox enable_sb  'Enable theme scrollbars' 1
 
 @var color    _dark      'Color: Primary background   ' #1f232a
@@ -203,6 +204,19 @@ rad() { border-radius: arguments }
         /// Modals -> Tweak backdrop color.
         [role = 'presentation'] { c: 0 0 rgba(_darken, 0.8) i }
 
+        /// Feat -> Remove logged-out annoyances.
+        if ( enable_la == 1 ) {
+            /.not-logged-in {
+                /// Remove login/signup bar.
+                .N9d2H { display: none i }
+                /// Remove login/signup prompt.
+                &[style *= 'overflow: hidden'] {
+                    overflow: unset i;
+                    > [role = 'presentation'] { display: none i }
+                }
+            }
+        }
+
         /// Search -> Hashtags | Sections.
         .LFGs8 { c: ac }
         .yQ0j1 { c: cm }
@@ -225,7 +239,6 @@ rad() { border-radius: arguments }
 
         /// Settings -> Fix borders.
         .rb9ad { c: 0 bd }
-
 
         /// Posts -> Related accounts.
         article + div + div.GZkEI {
