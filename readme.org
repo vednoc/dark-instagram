@@ -1,0 +1,56 @@
+#+STARTUP: nofold
+#+HTML: <div align="center">
+
+* Dark-Instagram
+Opinionated, customizable, dark and light mode implementation for [[https://instagram.com][Instagram]].
+
+[[https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.styl][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
+[[https://discord.gg/NpT8PzA][https://img.shields.io/discord/272011641694978048.svg?longCache=true&colorB=7289da&logo=discord&style=flat]]
+
+#+HTML: <img src="https://gitlab.com/vednoc/dark-instagram/-/raw/master/images/preview.png" width="100%"/>
+
+/Preview image shows v1.0.0 with default colors on 1920x1080 resolution./
+
+#+HTML: </div>
+
+** Features
+This is why you should consider using Dark-Instagram!
+
+- Uses built-in CSS variables wherever possible, making it easy to maintain
+- Fully customizable color-scheme through Stylus configuration menu
+- Removal of right-click context menu from media
+- Removal of logged-out annoyances
+- Custom UI/emoji fonts
+
+** Installation
+You have to install [[https://add0n.com/stylus.html][Stylus]] and then click on the install link below.
+
+[[https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.styl][https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat]]
+
+*** Initial configuration
+To customize colors and/or other features, follow these instructions:
+  - Open the Stylus extension popup while you're on any page Dark-Instagram is
+    active on, or from the Manage page in Stylus. Click on the cogwheel icon and
+    that'll open up a menu from which you can customize the available options.
+
+*** Other ways to install this userstyle
+Supported but /not recommended/.
+
+**** Userstyle managers that don't support stylus-lang but support UserCSS
+Just install from =instagram.user.css= file using [[https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css][this link]].
+
+**** /Stylish/ is only supported through /[[https://userstyles.org/styles/151951][userstyles.org]]/
+USo is still the largest repository for themes despite all the issues. Don't use
+this version unless you /absolutely/ have to.
+
+It only has core functionality, is (likely) outdated, has no support, and needs
+to be /manually/ compiled for every single update.
+
+** Contributions
+Any contribution is greatly appreciated.
+
+If you really like the project and would like to tip me for my work, then you
+can buy me a coffee over at [[https://ko-fi.com/vednoc][ko-fi]] or support me over at [[https://liberapay.com/vednoc][LiberaPay]].
+
+** License
+Code released under the [[https://gitlab.com/vednoc/dark-instagram/license][MIT]] license.
