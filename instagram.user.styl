@@ -140,5 +140,69 @@ rad() { border-radius: arguments }
         &, button, input, textarea {
             font-family: var(--ui-font) i;
         }
+
+        /// Loading.
+        &[style *= 'background: white'] {
+            c: 0 0 bg;
+            svg { fill: cm i }
+        }
+
+        /// 404 page.
+        &[class *= 'error'], &[class *= '404'] {
+            .top-bar {
+                c: fg bd hl;
+                if ( ic_invert == 1 ) {
+                    .logo { filter: invert(0.8) i }
+                }
+            }
+            a, strong { c: ac }
+        }
+
+        /// Icons.
+        svg {
+            &[fill = '#262626'] { fill: cm }
+            &[fill = '#ed4956'] { fill: red }
+        }
+
+        /// Login -> Links.
+        ._2Lks6 { c: ac }
+
+        /// Modals -> Tweak backdrop color.
+        [role = 'presentation'] { c: 0 0 rgba(_darken, 0.8) i }
+
+        /// Search -> Hashtags | Sections.
+        .LFGs8 { c: ac }
+        .yQ0j1 { c: cm }
+
+        /// Profile -> Avatar background.
+        .M-jxE { &, > button { c: 0 0 hl }}
+
+        /// Profile -> Private account alert.
+        ._4Kbb_ {
+            margin-top: 1rem;
+            c: fg bd hl;
+            /.hUQXy { &, &:visited { c: ac }}
+        }
+
+        /// Profile -> Empty profile alert.
+        .jju9v {
+            border: 1px solid bd;
+            c: fg 0 hl;
+        }
+
+        /// Settings -> Fix borders.
+        .rb9ad { c: 0 bd }
+
+
+        /// Posts -> Related accounts.
+        article + div + div.GZkEI {
+            margin-top: 28px;
+        }
+
+
+        /// Footer -> Copyright.
+        footer nav + span, .copyright {
+            c: cm;
+        }
     }
 }
