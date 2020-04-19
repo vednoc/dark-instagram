@@ -12,6 +12,7 @@
 
 @var text     ui_font    'Custom UI font' '"font_name"'
 @var text     emoji_font 'Custom emoji font' '"font_name"'
+@var checkbox ic_invert  'Enable icon inversion in dark mode' 1
 @var checkbox enable_sb  'Enable theme scrollbars' 1
 
 @var color    _dark      'Color: Primary background   ' #1f232a
@@ -164,8 +165,40 @@ rad() { border-radius: arguments }
             &[fill = '#ed4956'] { fill: red }
         }
 
+        /// Feat -> Icon inversion in dark mode.
+        if ( ic_invert == 1 ) {
+            .coreSprite {
+                &LoggedOutWordmark,
+                &MobileNavDirect,
+                &TaggedNull {
+                filter: invert(0.8) i;
+                }
+                /// DMs -> Landing icon.
+                /[class *= 'SpriteDirect'],
+                /// Profile -> Follow.
+                /[class *= 'SpriteFriend_'],
+                /// Profile -> Options.
+                /[class *= 'SpriteDropdownArrowGrey'],
+                /// Profile -> IGTV icon.
+                /[class *= 'SpriteProfileChannelNullState'],
+                /// Settings -> Login activity.
+                /[class *= 'SpriteLocation'],
+                /// Posts -> Load more messages.
+                /[class *= 'SpriteCircle'] {
+                    filter: invert(0.8) i;
+                }
+            }
+        }
+
         /// Login -> Links.
         ._2Lks6 { c: ac }
+
+        /// Navbar -> Invert IG logo.
+        if ( ic_invert == 1 ) {
+            nav a[href = '/'] img {
+                &, /[src *= 'logo.png'] { filter: invert(0.8) }
+            }
+        }
 
         /// Modals -> Tweak backdrop color.
         [role = 'presentation'] { c: 0 0 rgba(_darken, 0.8) i }
@@ -199,6 +232,10 @@ rad() { border-radius: arguments }
             margin-top: 28px;
         }
 
+        /// Posts -> Invert loading image.
+        if ( ic_invert == 1 ) {
+            .WidCF, .HaS-3 { filter: invert(0.8) i }
+        }
 
         /// Footer -> Copyright.
         footer nav + span, .copyright {
