@@ -1,0 +1,188 @@
+/* ==UserStyle==
+@name         Dark-Instagram Lite
+@namespace    gitlab.com/vednoc/dark-instagram
+@description  Customizable dark and light theme for Instagram.
+@author       vednoc <vednoc@pm.me> (https://gitlab.com/vednoc)
+@homepageURL  https://gitlab.com/vednoc/dark-instagram
+@supportURL   https://gitlab.com/vednoc/dark-instagram/issues
+@updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
+@version      1.0.0
+@license      MIT
+==/UserStyle== */
+@-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
+  :root {
+    --b6a: 51,57,67;
+    --b38: 51,57,67;
+    --ce3: 51,57,67;
+    --ca6: 51,57,67;
+    --d87: 37,42,51;
+    --b3f: 31,35,42;
+    --i1d: 233,233,233;
+    --f75: 233,233,233;
+    --f52: 161,161,161;
+    --bb2: 31,35,42;
+    --f23: 31,35,42;
+    --fe0: 114,137,218;
+    --d69: 114,137,218;
+    --c37: 114,137,218;
+    --note: 'Dark-Instagram Lite v1.0.0';
+    --bshadow: 0 2px 4px var(--shadow);
+    --t: transparent !important;
+    --avatar: a_radius;
+    --ui-font: 'font_name', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', var(--emoji-font), sans-serif;
+    --emoji-font: 'font_name', 'joypixels', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --white: #fff;
+    --dark: #1f232a;
+    --darken: #252a33;
+    --darker: #333943;
+    --light: #e9e9e9;
+    --lighter: #a1a1a1;
+    --accent: #7289da;
+    --shadow: _shadow;
+    --yellow: #e5c512;
+    --orange: #df4b16;
+    --red: #dc322f;
+    --magenta: #f33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+    scrollbar-color: rgba(136,136,136,0.251) rgba(136,136,136,0.082);
+  }
+  :root ::-webkit-scrollbar {
+    background-color: rgba(136,136,136,0.082) !important;
+  }
+  :root ::-webkit-scrollbar-thumb {
+    background-color: rgba(136,136,136,0.251) !important;
+  }
+  body {
+    color: var(--light) !important;
+    background-color: var(--dark) !important;
+  }
+  body,
+  body button,
+  body input,
+  body textarea {
+    font-family: var(--ui-font) !important;
+  }
+  body[style *= 'background: white'] {
+    background-color: var(--dark) !important;
+  }
+  body[style *= 'background: white'] svg {
+    fill: var(--lighter) !important;
+  }
+  body[class *= 'error'] .top-bar,
+  body[class *= '404'] .top-bar {
+    color: var(--light) !important;
+    border-color: var(--darker) !important;
+    background-color: var(--darken) !important;
+  }
+  body[class *= 'error'] .top-bar .logo,
+  body[class *= '404'] .top-bar .logo {
+    filter: invert(0.8) !important;
+  }
+  body[class *= 'error'] a,
+  body[class *= '404'] a,
+  body[class *= 'error'] strong,
+  body[class *= '404'] strong {
+    color: var(--accent) !important;
+  }
+  body svg[fill = '#262626'] {
+    fill: var(--lighter);
+  }
+  body svg[fill = '#ed4956'] {
+    fill: var(--red);
+  }
+  body .coreSpriteLoggedOutWordmark,
+  body .coreSpriteMobileNavDirect,
+  body .coreSpriteTaggedNull {
+    filter: invert(0.8) !important;
+  }
+  [class *= 'SpriteDirect'],
+  [class *= 'SpriteFriend_'],
+  [class *= 'SpriteDropdownArrowGrey'],
+  [class *= 'SpriteProfileChannelNullState'],
+  [class *= 'SpriteLocation'],
+  [class *= 'SpriteCircle'] {
+    filter: invert(0.8) !important;
+  }
+  body ._2Lks6 {
+    color: var(--accent) !important;
+  }
+  body nav a[href = '/'] img,
+  [src *= 'logo.png'] {
+    filter: invert(0.8);
+  }
+  body [role = 'presentation'] {
+    background-color: rgba(37,42,51,0.8) !important;
+  }
+  .not-logged-in .N9d2H {
+    display: none !important;
+  }
+  .not-logged-in[style *= 'overflow: hidden'] {
+    overflow: unset !important;
+  }
+  .not-logged-in[style *= 'overflow: hidden'] > [role = 'presentation'] {
+    display: none !important;
+  }
+  body .LFGs8 {
+    color: var(--accent) !important;
+  }
+  body .yQ0j1 {
+    color: var(--lighter) !important;
+  }
+  body .M-jxE,
+  body .M-jxE > button {
+    background-color: var(--darken) !important;
+  }
+  body ._4Kbb_ {
+    margin-top: 1rem;
+    color: var(--light) !important;
+    border-color: var(--darker) !important;
+    background-color: var(--darken) !important;
+  }
+  .hUQXy,
+  .hUQXy:visited {
+    color: var(--accent) !important;
+  }
+  body .jju9v {
+    border: 1px solid var(--darker);
+    color: var(--light) !important;
+    background-color: var(--darken) !important;
+  }
+  body .rb9ad {
+    border-color: var(--darker) !important;
+  }
+  body article + div + div.GZkEI {
+    margin-top: 28px;
+  }
+  body .WidCF,
+  body .HaS-3 {
+    filter: invert(0.8) !important;
+  }
+  body img + div[style = 'height: 100%;'] {
+    position: unset !important;
+    display: none !important;
+  }
+  body ._9AhH0 {
+    position: unset !important;
+  }
+  body .PyenC,
+  body .fXIG0 {
+    bottom: 40px !important;
+  }
+  body ._8jZFn {
+    position: unset !important;
+  }
+  body footer nav + span,
+  body .copyright {
+    font-size: 0 !important;
+    color: var(--lighter) !important;
+  }
+  body footer nav + span::before,
+  body .copyright::before {
+    content: var(--note) !important;
+    font-size: 14px !important;
+    text-transform: initial !important;
+  }
+}
