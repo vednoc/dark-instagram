@@ -9,7 +9,8 @@ Opinionated, customizable, dark and light mode implementation for [[https://inst
 
 #+HTML: <img src="https://gitlab.com/vednoc/dark-instagram/-/raw/master/images/preview.png" width="100%"/>
 
-/Preview image shows v1.0.0 with default colors on 1920x1080 resolution./
+/Preview image shows v2.0.0 with default colors, Inter as the UI font on
+1920x1080 resolution./
 
 #+HTML: </div>
 
