@@ -57,7 +57,7 @@ to_rgb(input) {
 // Border radius mixin.
 rad() { border-radius: arguments }
 
-@-moz-document regexp('^https?://((www)\.)?(instagram\.(?!(io)).*)(/.*)?$') {
+@-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
     :root {
         /// Instagram variables.
         --b6a: to_rgb(_darker);     /// Global border colors.
