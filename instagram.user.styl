@@ -13,6 +13,7 @@
 @var text     ui_font    'Custom UI font' '"font_name"'
 @var text     emoji_font 'Custom emoji font' '"font_name"'
 @var checkbox ic_invert  'Enable icon inversion in dark mode' 1
+@var checkbox enable_cm  'Enable right-click context menu' 1
 @var checkbox enable_la  'Enable removal of logged-out annoyances' 1
 @var checkbox enable_sb  'Enable theme scrollbars' 1
 
@@ -248,6 +249,21 @@ rad() { border-radius: arguments }
         /// Posts -> Invert loading image.
         if ( ic_invert == 1 ) {
             .WidCF, .HaS-3 { filter: invert(0.8) i }
+        }
+
+        /// Feat -> Enable right-click context menu.
+        if ( enable_cm == 1 ) {
+            /// Stories.
+            img + div[style = 'height: 100%;'] {
+                position: unset i;
+                display: none i;
+            }
+            /// Images.
+            ._9AhH0 { position: unset i }
+            /// Videos.
+            .PyenC, .fXIG0 { bottom: 40px i }
+            /// Hide video preview image.
+            ._8jZFn { position: unset i }
         }
 
         /// Footer -> Copyright.
