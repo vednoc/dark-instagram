@@ -10,6 +10,8 @@
 @version      1.0.0
 @license      MIT
 
+@var text     ui_font    'Custom UI font' '"font_name"'
+@var text     emoji_font 'Custom emoji font' '"font_name"'
 @var checkbox enable_sb  'Enable theme scrollbars' 1
 
 @var color    _dark      'Color: Primary background   ' #1f232a
@@ -133,5 +135,10 @@ rad() { border-radius: arguments }
     // App styles.
     body {
         c: fg 0 bg;
+
+        /// Feat -> Custom UI font.
+        &, button, input, textarea {
+            font-family: var(--ui-font) i;
+        }
     }
 }
