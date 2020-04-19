@@ -6,7 +6,7 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      1.0.0
+@version      2.0.0
 @license      MIT
 ==/UserStyle== */
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
@@ -25,7 +25,7 @@
     --fe0: 114,137,218;
     --d69: 114,137,218;
     --c37: 114,137,218;
-    --note: 'Dark-Instagram Lite v1.0.0';
+    --note: 'Dark-Instagram Lite v2.0.0';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -181,7 +181,7 @@
   }
   body footer nav + span::before,
   body .copyright::before {
-    content: var(--note) !important;
+    content: '🌚 ' var(--note) !important;
     font-size: 14px !important;
     text-transform: initial !important;
   }

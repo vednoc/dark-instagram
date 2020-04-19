@@ -7,7 +7,7 @@
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.styl
 @preprocessor stylus
-@version      1.0.0
+@version      2.0.0
 @license      MIT
 
 @var text     ui_font    'Custom UI font' '"font_name"'
@@ -76,7 +76,7 @@ rad() { border-radius: arguments }
         --c37: to_rgb(_accent);     /// Notifications.
 
         /// Theme variables.
-        --note      : 'Dark-Instagram v1.0.0';
+        --note      : 'Dark-Instagram v2.0.0';
         --bshadow   : 0 2px 4px var(--shadow);
         --t         : transparent !important;
         --avatar    : a_radius;
@@ -271,7 +271,7 @@ rad() { border-radius: arguments }
             font-size: 0 i;
             c: cm;
             &::before {
-                content: var(--note) i;
+                content: '🌚 ' var(--note) i;
                 font-size: 14px i;
                 text-transform: initial i;
             }
