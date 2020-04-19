@@ -10,6 +10,8 @@
 @version      1.0.0
 @license      MIT
 
+@var checkbox enable_sb  'Enable theme scrollbars' 1
+
 @var color    _dark      'Color: Primary background   ' #1f232a
 @var color    _darken    'Color: Highlight background ' #252A33
 @var color    _darker    'Color: Secondary background ' #333943
@@ -94,6 +96,15 @@ rad() { border-radius: arguments }
         --blue      : _blue;
         --cyan      : _cyan;
         --green     : _green;
+
+        /// Enable theme scrollbars.
+        if ( enable_sb == 1 ) {
+            scrollbar-color: #88888840 #88888815;
+            ::-webkit-scrollbar {
+                c: 0 0 #88888815;
+                &-thumb { c: 0 0 #88888840 }
+            }
+        }
     }
 
     // Overwrite existing Stylus-lang vars with CSS vars.
