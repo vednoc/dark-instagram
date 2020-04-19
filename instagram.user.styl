@@ -239,7 +239,13 @@ rad() { border-radius: arguments }
 
         /// Footer -> Copyright.
         footer nav + span, .copyright {
+            font-size: 0 i;
             c: cm;
+            &::before {
+                content: var(--note) i;
+                font-size: 14px i;
+                text-transform: initial i;
+            }
         }
     }
 }
