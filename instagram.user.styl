@@ -253,6 +253,23 @@ rad() { border-radius: arguments }
             .WidCF, .HaS-3 { filter: invert(0.8) i }
         }
 
+        /// Posts -> Lightbox borders.
+        [role = 'dialog'] {
+            /body > ^[1..1] > ^[1..1] > ^[1..1] {
+                border: 1px solid bd i;
+                box-shadow: 0 0px 16px hl;
+            }
+        }
+
+        /// Posts -> Context menu borders.
+        > [role = 'presentation'] {
+            > [role = 'dialog'] { border: 1px solid bd i }
+            /// Hover styles.
+            button.aOOlW:not(.SRPMb) {
+                &:hover, &:active { c: 0 0 hl }
+            }
+        }
+
         /// Feat -> Enable right-click context menu.
         if ( enable_cm == 1 ) {
             /// Stories.
