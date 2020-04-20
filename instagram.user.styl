@@ -181,12 +181,14 @@ rad() { border-radius: arguments }
                 &LoggedOutWordmark,
                 &MobileNavDirect,
                 &TaggedNull {
-                filter: invert(0.8) i;
+                    filter: invert(0.8) i;
                 }
                 /// DMs -> Landing icon.
                 /[class *= 'SpriteDirect'],
                 /// Profile -> Follow.
                 /[class *= 'SpriteFriend_'],
+                /// Profile -> Followers.
+                /[class *= 'SpriteAdd_friend_'],
                 /// Profile -> Options.
                 /[class *= 'SpriteDropdownArrowGrey'],
                 /// Profile -> IGTV icon.
