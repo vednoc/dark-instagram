@@ -203,7 +203,9 @@ rad() { border-radius: arguments }
         }
 
         /// Modals -> Tweak backdrop color.
-        [role = 'presentation'] { c: 0 0 rgba(_darken, 0.8) i }
+        > [role = 'presentation'], > [role = 'dialog'] {
+            background: unquote('rgba(var(--d87), 0.8)') i;
+        }
 
         /// Feat -> Remove logged-out annoyances.
         if ( enable_la == 1 ) {
