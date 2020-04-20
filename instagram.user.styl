@@ -135,6 +135,13 @@ rad() { border-radius: arguments }
     inner   = inset outer;
     i       = !important;
 
+    /// Loader animation.
+    @keyframes Loader {
+          0% { background-position: 33%   0% }
+         50% { background-position: 68% 100% }
+        100% { background-position: 33%   0% }
+    }
+
     // App styles.
     body {
         c: fg 0 bg;
@@ -250,7 +257,12 @@ rad() { border-radius: arguments }
 
         /// Posts -> Invert loading image.
         if ( ic_invert == 1 ) {
-            .WidCF, .HaS-3 { filter: invert(0.8) i }
+            .WidCF, .HaS-3 {
+                background-size: 200% 200% i;
+                background: linear-gradient(115deg, hl 40%, bd, hl 60%);
+                animation: Loader 2.5s ease infinite i;
+                c: 0 0 hl;
+            }
         }
 
         /// Posts -> Lightbox borders.
