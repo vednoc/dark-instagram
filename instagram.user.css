@@ -6,7 +6,7 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.0.0
+@version      2.1.0
 @license      MIT
 ==/UserStyle== */
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
@@ -25,11 +25,11 @@
     --fe0: 114,137,218;
     --d69: 114,137,218;
     --c37: 114,137,218;
-    --note: 'Dark-Instagram Lite v2.0.0';
+    --note: 'Dark-Instagram Lite v2.1.0';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
-    --ui-font: 'font_name', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', var(--emoji-font), sans-serif;
+    --ui-font: 'font_name', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, Ubuntu, Cantarell, 'Noto Sans', var(--emoji-font), sans-serif;
     --emoji-font: 'font_name', 'joypixels', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --white: #fff;
     --dark: #1f232a;
@@ -100,10 +100,14 @@
   }
   [class *= 'SpriteDirect'],
   [class *= 'SpriteFriend_'],
+  [class *= 'SpriteAdd_friend_'],
   [class *= 'SpriteDropdownArrowGrey'],
   [class *= 'SpriteProfileChannelNullState'],
   [class *= 'SpriteLocation'],
   [class *= 'SpriteCircle'] {
+    filter: invert(0.8) !important;
+  }
+  img[src *= '44884218_345707102882519_2446069589734326272'] {
     filter: invert(0.8) !important;
   }
   body ._2Lks6 {
@@ -113,16 +117,29 @@
   [src *= 'logo.png'] {
     filter: invert(0.8);
   }
-  body [role = 'presentation'] {
-    background-color: rgba(37,42,51,0.8) !important;
+  body .HZ802,
+  body .nHGTw {
+    color: var(--white) !important;
+    background-color: var(--red) !important;
+  }
+  body .HZ802 .H9zXO::after,
+  body .nHGTw .H9zXO::after {
+    background-color: var(--red) !important;
+  }
+  .iMofo {
+    box-shadow: 0 4px 16px var(--shadow) !important;
+  }
+  body > [role = 'presentation'],
+  body > [role = 'dialog'] {
+    background: rgba(var(--d87), 0.8) !important;
   }
   .not-logged-in .N9d2H {
     display: none !important;
   }
-  .not-logged-in[style *= 'overflow: hidden'] {
+  .not-logged-in [style *= 'overflow: hidden'] {
     overflow: unset !important;
   }
-  .not-logged-in[style *= 'overflow: hidden'] > [role = 'presentation'] {
+  .not-logged-in [style *= 'overflow: hidden'] > [role = 'presentation'] {
     display: none !important;
   }
   body .LFGs8 {
@@ -150,7 +167,8 @@
     color: var(--light) !important;
     background-color: var(--darken) !important;
   }
-  body .rb9ad {
+  body .rb9ad,
+  body .d-Vzv {
     border-color: var(--darker) !important;
   }
   body article + div + div.GZkEI {
@@ -158,7 +176,22 @@
   }
   body .WidCF,
   body .HaS-3 {
-    filter: invert(0.8) !important;
+    border-right: 1px solid var(--darker);
+    background-size: 200% 200% !important;
+    background: linear-gradient(115deg, var(--dark) 40%, var(--darken), var(--dark) 60%);
+    animation: Loader 2.5s ease infinite !important;
+    background-color: var(--darken) !important;
+  }
+  body > [role = 'dialog'] > [role = 'dialog'] > [role = 'dialog'] {
+    border: 1px solid var(--darker) !important;
+    box-shadow: 0 0px 16px var(--darken);
+  }
+  body > [role = 'presentation'] > [role = 'dialog'] {
+    border: 1px solid var(--darker) !important;
+  }
+  body > [role = 'presentation'] button.aOOlW:not(.SRPMb):hover,
+  body > [role = 'presentation'] button.aOOlW:not(.SRPMb):active {
+    background-color: var(--darken) !important;
   }
   body img + div[style = 'height: 100%;'] {
     position: unset !important;
@@ -174,6 +207,14 @@
   body ._8jZFn {
     position: unset !important;
   }
+  body .GBPOY {
+    border-radius: 3px;
+    border-color: var(--darker) !important;
+    background-color: var(--darken) !important;
+  }
+  body .GBPOY a {
+    color: var(--light) !important;
+  }
   body footer nav + span,
   body .copyright {
     font-size: 0 !important;
@@ -184,5 +225,16 @@
     content: '🌚 ' var(--note) !important;
     font-size: 14px !important;
     text-transform: initial !important;
+  }
+  @keyframes Loader {
+    0% {
+      background-position: 33% 0%;
+    }
+    50% {
+      background-position: 68% 100%;
+    }
+    100% {
+      background-position: 33% 0%;
+    }
   }
 }
