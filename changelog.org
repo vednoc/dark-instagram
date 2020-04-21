@@ -1,5 +1,19 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.1.0 [2020-04-21]
+Improving some things.
+
+*** Improved
+- Backdrop color for modals
+- Added borders around posts and menus
+- Implemented a better loading animation for posts
+- Added theme colors to 'new follower' alert
+
+*** Fixed
+- Font order for UI fonts
+- A bunch of non-SVG icons
+- Styles for 'profiles directory' page
+
 ** 2.0.0 [2020-04-19]
 Rewritten everything from the scratch.
