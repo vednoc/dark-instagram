@@ -150,6 +150,9 @@ rad() { border-radius: arguments }
     body {
         c: fg 0 bg;
 
+        ::placeholder { c: cm }
+        ::-webkit-input-placeholder { c: cm }
+
         /// Feat -> Custom UI font.
         &, button, input, textarea {
             font-family: var(--ui-font) i;
