@@ -76,6 +76,7 @@ rad() { border-radius: arguments }
         --d69: to_rgb(_accent);     /// Post/login button.
         --c37: to_rgb(_accent);     /// Notifications.
         --jb7: to_rgb(_shadow);     /// Emoji menu shadow.
+        --fa7: to_rgb(_darken);     /// New message user.
 
         /// Theme variables.
         --note      : 'Dark-Instagram v2.1.0';
@@ -336,6 +337,23 @@ rad() { border-radius: arguments }
             c: 0 bd hl;
             a { c: fg }
         }
+
+        /// DMs -> Emoji menu.
+        .uo5MA {
+            &, > div:nth-child(1) {
+                box-shadow: bsh i;
+                border: 1px solid bd;
+                c: 0 0 bg;
+            }
+            > div:nth-child(2) { c: 0 0 bg }
+            > div:nth-child(3) { rad: 0 0 6px 6px }
+        }
+
+        /// DMs -> Input bar.
+        /.X3a-9 { c: 0 0 bg }
+
+        /// DMs -> Left message.
+        .CMoMH:not(._6FEQj) { c: 0 0 #00000010 }
 
         /// Footer -> Sent message.
         .XjicZ {
