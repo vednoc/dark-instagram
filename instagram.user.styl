@@ -75,6 +75,7 @@ rad() { border-radius: arguments }
         --fe0: to_rgb(_accent);     /// Links.
         --d69: to_rgb(_accent);     /// Post/login button.
         --c37: to_rgb(_accent);     /// Notifications.
+        --jb7: to_rgb(_shadow);     /// Emoji menu shadow.
 
         /// Theme variables.
         --note      : 'Dark-Instagram v2.1.0';
@@ -174,6 +175,7 @@ rad() { border-radius: arguments }
         svg {
             &[fill = '#262626'] { fill: cm }
             &[fill = '#ed4956'] { fill: red }
+            &[fill = '#0095f6'] { fill: blue }
         }
 
         /// Feat -> Icon inversion in dark mode.
@@ -184,20 +186,29 @@ rad() { border-radius: arguments }
                 &TaggedNull {
                     filter: invert(0.8) i;
                 }
-                /// DMs -> Landing icon.
+                /// Modals -> Share menu.
                 /[class *= 'SpriteDirect'],
+                /[class *= 'SpriteFacebook'],
+                /[class *= 'SpriteLink'],
+                /[class *= 'SpriteMail'],
+                /[class *= 'SpriteApp'],
+                /[class *= 'Spritez'],
                 /// Profile -> Follow.
                 /[class *= 'SpriteFriend_'],
                 /// Profile -> Followers.
                 /[class *= 'SpriteAdd_friend_'],
                 /// Profile -> Options.
                 /[class *= 'SpriteDropdownArrowGrey'],
+                /// Profile -> Suggestions.
+                /[class *= 'SpritePagingChevron'],
+                /// Profile -> No posts.
+                /[class *= 'SpriteCamera'],
                 /// Profile -> IGTV icon.
                 /[class *= 'SpriteProfileChannelNullState'],
                 /// Settings -> Login activity.
-                /[class *= 'SpriteLocation'],
+                /[class *= 'SpriteLocation_'],
                 /// Posts -> Load more messages.
-                /[class *= 'SpriteCircle'] {
+                /[class *= 'SpriteCircle_add'] {
                     filter: invert(0.8) i;
                 }
             }
@@ -262,8 +273,8 @@ rad() { border-radius: arguments }
             c: fg 0 hl;
         }
 
-        /// Settings -> Fix borders | Profile -> Hashtags.
-        .rb9ad, .d-Vzv { c: 0 bd }
+        /// Settings -> Fix borders | Profile -> Camera | Hashtags.
+        .rb9ad, .-wdIA, .d-Vzv { c: 0 bd }
 
         /// Posts -> 'New Posts' button.
         .tCibT {
