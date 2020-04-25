@@ -6,7 +6,7 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.2.0
+@version      2.2.1
 @license      MIT
 
 ==/UserStyle== */
@@ -29,7 +29,7 @@
     --c37: 114,137,218;
     --jb7: 0,0,0;
     --fa7: 37,42,51;
-    --note: 'Dark-Instagram Lite v2.2.0';
+    --note: 'Dark-Instagram Lite v2.2.1';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -250,9 +250,9 @@
     position: unset !important;
     display: none !important;
   }
-  .B20bj,
-  body .z6Odz,
-  body .i0EQd {
+  .GHEPc .B20bj,
+  .GHEPc .z6Odz,
+  .GHEPc .i0EQd {
     display: none;
   }
   body ._9AhH0 {
