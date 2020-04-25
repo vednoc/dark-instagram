@@ -1,6 +1,22 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.2.0 [2020-04-25]
+More bug fixes and improvements!
+
+*** Improved
+- Contrast for various elements in DMs
+- Story loader background and input elements
+- Right-click menu option for story videos
+- SVG icon colors and added hover animation
+
+*** Fixed
+- Shadow color variable
+- Colors and borders for 'new posts' button
+- Colors for 'sent message' notification
+- More of image-icon selectors
+- Default input placeholder colors
+
 ** 2.1.0 [2020-04-21]
 Improving some things.
 
