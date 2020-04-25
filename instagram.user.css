@@ -6,8 +6,9 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.1.0
+@version      2.2.0
 @license      MIT
+
 ==/UserStyle== */
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
   :root {
@@ -16,6 +17,7 @@
     --ce3: 51,57,67;
     --ca6: 51,57,67;
     --d87: 37,42,51;
+    --f23: 37,42,51;
     --b3f: 31,35,42;
     --i1d: 233,233,233;
     --f75: 233,233,233;
@@ -25,7 +27,9 @@
     --fe0: 114,137,218;
     --d69: 114,137,218;
     --c37: 114,137,218;
-    --note: 'Dark-Instagram Lite v2.1.0';
+    --jb7: 0,0,0;
+    --fa7: 37,42,51;
+    --note: 'Dark-Instagram Lite v2.2.0';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -38,7 +42,7 @@
     --light: #e9e9e9;
     --lighter: #a1a1a1;
     --accent: #7289da;
-    --shadow: _shadow;
+    --shadow: rgba(0,0,0,0.145);
     --yellow: #e5c512;
     --orange: #df4b16;
     --red: #dc322f;
@@ -58,6 +62,12 @@
   body {
     color: var(--light) !important;
     background-color: var(--dark) !important;
+  }
+  body ::placeholder {
+    color: var(--lighter) !important;
+  }
+  body ::-webkit-input-placeholder {
+    color: var(--lighter) !important;
   }
   body,
   body button,
@@ -88,10 +98,25 @@
     color: var(--accent) !important;
   }
   body svg[fill = '#262626'] {
+    fill: var(--light);
+  }
+  body svg[fill = '#ffffff'] {
+    fill: var(--light);
+  }
+  body svg[fill = '#8e8e8e'] {
     fill: var(--lighter);
   }
   body svg[fill = '#ed4956'] {
     fill: var(--red);
+  }
+  body svg[fill = '#0095f6'] {
+    fill: var(--blue);
+  }
+  body svg path {
+    transition: fill-opacity 0.2s ease;
+  }
+  body svg:hover path {
+    fill-opacity: 0.6;
   }
   body .coreSpriteLoggedOutWordmark,
   body .coreSpriteMobileNavDirect,
@@ -99,12 +124,19 @@
     filter: invert(0.8) !important;
   }
   [class *= 'SpriteDirect'],
+  [class *= 'SpriteFacebook'],
+  [class *= 'SpriteLink'],
+  [class *= 'SpriteMail'],
+  [class *= 'SpriteApp'],
+  [class *= 'Spritez'],
   [class *= 'SpriteFriend_'],
   [class *= 'SpriteAdd_friend_'],
   [class *= 'SpriteDropdownArrowGrey'],
+  [class *= 'SpritePagingChevron'],
+  [class *= 'SpriteCamera'],
   [class *= 'SpriteProfileChannelNullState'],
-  [class *= 'SpriteLocation'],
-  [class *= 'SpriteCircle'] {
+  [class *= 'SpriteLocation_'],
+  [class *= 'SpriteCircle_add'] {
     filter: invert(0.8) !important;
   }
   img[src *= '44884218_345707102882519_2446069589734326272'] {
@@ -168,8 +200,29 @@
     background-color: var(--darken) !important;
   }
   body .rb9ad,
+  body .-wdIA,
   body .d-Vzv {
     border-color: var(--darker) !important;
+  }
+  body .Sux9m {
+    border-color: #555 !important;
+    background-color: #111 !important;
+  }
+  body .Sux9m ::placeholder {
+    color: #eee !important;
+  }
+  body .Sux9m ::-webkit-input-placeholder {
+    color: #eee !important;
+  }
+  body .Sux9m + div [class *= 'SpriteDirect'] {
+    filter: invert(0.6) !important;
+  }
+  ._2WZC0 canvas {
+    filter: invert(1) !important;
+  }
+  body .tCibT {
+    border: 1px solid var(--darker) !important;
+    box-shadow: var(--bshadow) !important;
   }
   body article + div + div.GZkEI {
     margin-top: 28px;
@@ -197,6 +250,11 @@
     position: unset !important;
     display: none !important;
   }
+  .B20bj,
+  body .z6Odz,
+  body .i0EQd {
+    display: none;
+  }
   body ._9AhH0 {
     position: unset !important;
   }
@@ -213,6 +271,31 @@
     background-color: var(--darken) !important;
   }
   body .GBPOY a {
+    color: var(--light) !important;
+  }
+  body .uo5MA,
+  body .uo5MA > div:nth-child(1) {
+    box-shadow: var(--bshadow) !important;
+    border: 1px solid var(--darker);
+    background-color: var(--dark) !important;
+  }
+  body .uo5MA > div:nth-child(2) {
+    background-color: var(--dark) !important;
+  }
+  body .uo5MA > div:nth-child(3) {
+    border-radius: 0 0 6px 6px;
+  }
+  .X3a-9 {
+    background-color: var(--dark) !important;
+  }
+  body .CMoMH:not(._6FEQj) {
+    background-color: rgba(0,0,0,0.063) !important;
+  }
+  body .XjicZ {
+    border-top: 1px solid var(--darker);
+    background-color: var(--darken) !important;
+  }
+  body .XjicZ p {
     color: var(--light) !important;
   }
   body footer nav + span,
