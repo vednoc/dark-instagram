@@ -182,6 +182,10 @@ rad() { border-radius: arguments }
             &[fill = '#8e8e8e'] { fill: cm }
             &[fill = '#ed4956'] { fill: red }
             &[fill = '#0095f6'] { fill: blue }
+            path {
+                transition: fill-opacity 0.2s ease;
+                ../:hover path { fill-opacity: 0.6 }
+            }
         }
 
         /// Feat -> Icon inversion in dark mode.
