@@ -10,12 +10,17 @@
 @version      2.2.1
 @license      MIT
 
-@var text     ui_font    'Custom UI font' '"font_name"'
-@var text     emoji_font 'Custom emoji font' '"font_name"'
-@var checkbox ic_invert  'Enable icon inversion in dark mode' 1
-@var checkbox enable_cm  'Enable right-click context menu' 1
-@var checkbox enable_la  'Enable removal of logged-out annoyances' 1
-@var checkbox enable_sb  'Enable theme scrollbars' 1
+@var text     ui_font       'Custom UI font' '"font_name"'
+@var text     emoji_font    'Custom emoji font' '"font_name"'
+@var checkbox ic_invert     'Enable icon inversion in dark mode' 1
+@var checkbox enable_cm     'Enable right-click context menu' 1
+@var checkbox enable_la     'Enable removal of logged-out annoyances' 1
+@var checkbox custom_width  'Custom scrollbar width' 1
+@var select   sb_color      'Scrollbar colors' {
+        "None": "none",
+        "Theme default": "theme",
+        "With accent*": "accent"
+    }
 
 @var color    _dark      'Color: Primary background   ' #1f232a
 @var color    _darken    'Color: Highlight background ' #252A33
@@ -105,12 +110,24 @@ rad() { border-radius: arguments }
         --cyan      : _cyan;
         --green     : _green;
 
+        // Enable theme scrollbar width
+        if ( custom_width == 1) {
+            /::-webkit-scrollbar { width: .5em }
+            /\* { scrollbar-width: thin }
+        }
+
         /// Enable theme scrollbars.
-        if ( enable_sb == 1 ) {
-            scrollbar-color: #88888840 #88888815;
-            ::-webkit-scrollbar {
+        if ( sb_color == "theme" ) {
+            /html { scrollbar-color: #88888840 #88888815; }
+            /::-webkit-scrollbar {
                 c: 0 0 #88888815;
                 &-thumb { c: 0 0 #88888840 }
+            }
+        } else if ( sb_color == "accent" ) {
+            /html { scrollbar-color: var(--accent) #88888815; }
+            /::-webkit-scrollbar {
+                c: 0 0 #88888815;
+                &-thumb { c: 0 0 var(--accent) }
             }
         }
     }
