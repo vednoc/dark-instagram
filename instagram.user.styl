@@ -15,8 +15,12 @@
 @var checkbox ic_invert     'Enable icon inversion in dark mode' 1
 @var checkbox enable_cm     'Enable right-click context menu' 1
 @var checkbox enable_la     'Enable removal of logged-out annoyances' 1
-@var checkbox enable_sb     'Enable theme scrollbars' 0
-@var checkbox enable_sb_alt 'Enable theme scrollbars with accent colour' 1
+@var checkbox custom_width  'Custom scrollbar width' 1
+@var select   sb_color      'Scrollbar colors' {
+        "Default": "default",
+        "Dark": "dark",
+        "With accent": "accent"
+    }
 
 @var color    _dark      'Color: Primary background   ' #1f232a
 @var color    _darken    'Color: Highlight background ' #252A33
@@ -106,16 +110,21 @@ rad() { border-radius: arguments }
         --cyan      : _cyan;
         --green     : _green;
 
+        // Enable theme scrollbar width
+        if ( custom_width == 1) {
+            /::-webkit-scrollbar {
+                width: .5em
+            }
+        }
+
         /// Enable theme scrollbars.
-        if ( enable_sb == 1 ) {
+        if ( sb_color == "dark" ) {
             /html { scrollbar-color: #88888840 #88888815; }
             /::-webkit-scrollbar {
                 c: 0 0 #88888815;
                 &-thumb { c: 0 0 #88888840 }
             }
-        }
-
-        if ( enable_sb_alt == 1 ) {
+        } else if ( sb_color == "accent" ) {
             /html { scrollbar-color: #7289da transparent; }
             /::-webkit-scrollbar {
                 c: 0 0 #7289da;
