@@ -17,9 +17,9 @@
 @var checkbox enable_la     'Enable removal of logged-out annoyances' 1
 @var checkbox custom_width  'Custom scrollbar width' 1
 @var select   sb_color      'Scrollbar colors' {
-        "Default": "default",
-        "Dark": "dark",
-        "With accent": "accent"
+        "None": "none",
+        "Theme default": "theme",
+        "With accent*": "accent"
     }
 
 @var color    _dark      'Color: Primary background   ' #1f232a
@@ -112,23 +112,22 @@ rad() { border-radius: arguments }
 
         // Enable theme scrollbar width
         if ( custom_width == 1) {
-            /::-webkit-scrollbar {
-                width: .5em
-            }
+            /::-webkit-scrollbar { width: .5em }
+            /\* { scrollbar-width: thin }
         }
 
         /// Enable theme scrollbars.
-        if ( sb_color == "dark" ) {
+        if ( sb_color == "theme" ) {
             /html { scrollbar-color: #88888840 #88888815; }
             /::-webkit-scrollbar {
                 c: 0 0 #88888815;
                 &-thumb { c: 0 0 #88888840 }
             }
         } else if ( sb_color == "accent" ) {
-            /html { scrollbar-color: #7289da transparent; }
+            /html { scrollbar-color: #7289da #88888815; }
             /::-webkit-scrollbar {
-                c: 0 0 #7289da;
-                &-thumb { c: 0 0 transparent }
+                c: 0 0 #88888815;
+                &-thumb { c: 0 0 #7289da }
             }
         }
     }
