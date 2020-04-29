@@ -124,10 +124,10 @@ rad() { border-radius: arguments }
                 &-thumb { c: 0 0 #88888840 }
             }
         } else if ( sb_color == "accent" ) {
-            /html { scrollbar-color: #7289da #88888815; }
+            /html { scrollbar-color: var(--accent) #88888815; }
             /::-webkit-scrollbar {
                 c: 0 0 #88888815;
-                &-thumb { c: 0 0 #7289da }
+                &-thumb { c: 0 0 var(--accent) }
             }
         }
     }
