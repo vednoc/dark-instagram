@@ -18,6 +18,7 @@ Opinionated, customizable, dark and light mode implementation for [[https://inst
 This is why you should consider using Dark-Instagram!
 
 - Uses built-in CSS variables wherever possible, making it easy to maintain
+  - Supports dark and light color-schemes, and works great with [[https://gitlab.com/vednoc/dark-switcher/][dark-switcher]].
 - Fully customizable color-scheme through Stylus configuration menu
 - Removal of right-click context menu from media
 - Removal of logged-out annoyances
@@ -33,6 +34,8 @@ To customize colors and/or other features, follow these instructions:
   - Open the Stylus extension popup while you're on any page Dark-Instagram is
     active on, or from the Manage page in Stylus. Click on the cogwheel icon and
     that'll open up a menu from which you can customize the available options.
+  - Additionally, install [[https://gitlab.com/vednoc/dark-switcher/][dark-switcher]] if you'd like to quickly switch between
+    various pre-defined color-schemes.
 
 *** Other ways to install this userstyle
 Supported but /not recommended/.
