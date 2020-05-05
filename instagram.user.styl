@@ -49,39 +49,42 @@ c(x, y = 0, z = 0, xi = 1, yi = 1, zi = 1) {
     if y is a 'call' or y is a 'rgba' {     border-color: yi is 0? y : y i }
     if z is a 'call' or z is a 'rgba' { background-color: zi is 0? z : z i }
 }
+
 // SVG colors.
 v(x, y = 0, xi = 1, yi = 1) {
     i = !important;
     if x is a 'call' or x is a 'rgba' {   fill: xi is 0? x : x i }
     if y is a 'call' or y is a 'rgba' { stroke: yi is 0? y : y i }
 }
-// Hack to convert HEX to RGB values.
+
+// HACK: Convert HEX to RGB.
 to_rgb(input) {
     unquote(slice(s('%s', rgba(input, 0)), 5, -3))
 }
+
 // Border radius mixin.
 rad() { border-radius: arguments }
 
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
     :root {
         /// Instagram variables.
-        --b6a: to_rgb(_darker);     /// Global border colors.
-        --b38: to_rgb(_darker);     /// Profile border colors.
-        --ce3: to_rgb(_darker);     /// Post border colors.
-        --ca6: to_rgb(_darker);     /// Login border colors.
-        --d87: to_rgb(_darken);     /// Highlighted background.
-        --f23: to_rgb(_darken);     /// 'New Posts' button.
-        --b3f: to_rgb(_dark);       /// Primary background.
-        --i1d: to_rgb(_light);      /// Main text color.
-        --f75: to_rgb(_light);      /// Primary text.
-        --f52: to_rgb(_lighter);    /// Secondary text.
-        --bb2: to_rgb(_dark);       /// Post placeholder.
-        --f23: to_rgb(_dark);       /// Dialogs.
-        --fe0: to_rgb(_accent);     /// Links.
-        --d69: to_rgb(_accent);     /// Post/login button.
-        --c37: to_rgb(_accent);     /// Notifications.
-        --jb7: to_rgb(_shadow);     /// Emoji menu shadow.
-        --fa7: to_rgb(_darken);     /// New message user.
+        --b6a: var(--darker-rgb);     /// Global border colors.
+        --b38: var(--darker-rgb);     /// Profile border colors.
+        --ce3: var(--darker-rgb);     /// Post border colors.
+        --ca6: var(--darker-rgb);     /// Login border colors.
+        --d87: var(--darken-rgb);     /// Highlighted background.
+        --f23: var(--darken-rgb);     /// 'New Posts' button.
+        --b3f: var(--dark-rgb);       /// Primary background.
+        --i1d: var(--light-rgb);      /// Main text color.
+        --f75: var(--light-rgb);      /// Primary text.
+        --f52: var(--lighter-rgb);    /// Secondary text.
+        --bb2: var(--dark-rgb);       /// Post placeholder.
+        --f23: var(--dark-rgb);       /// Dialogs.
+        --fe0: var(--accent-rgb);     /// Links.
+        --d69: var(--accent-rgb);     /// Post/login button.
+        --c37: var(--accent-rgb);     /// Notifications.
+        --jb7: var(--shadow-rgb);     /// Emoji menu shadow.
+        --fa7: var(--darken-rgb);     /// New message user.
 
         /// Theme variables.
         --note      : 'Dark-Instagram v2.2.1';
@@ -110,7 +113,15 @@ rad() { border-radius: arguments }
         --cyan      : _cyan;
         --green     : _green;
 
-        // Enable theme scrollbar width
+        /// RGB variables.
+        --dark-rgb:    to_rgb(_dark);
+        --darken-rgb:  to_rgb(_darken);
+        --darker-rgb:  to_rgb(_darker);
+        --light-rgb:   to_rgb(_light);
+        --lighter-rgb: to_rgb(_lighter);
+        --accent-rgb:  to_rgb(_accent);
+        --shadow-rgb:  to_rgb(_shadow);
+
         if ( custom_width == 1) {
             /::-webkit-scrollbar { width: .5em }
             /\* { scrollbar-width: thin }
