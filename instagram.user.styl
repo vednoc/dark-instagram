@@ -15,12 +15,12 @@
 @var checkbox ic_invert     'Enable icon inversion in dark mode' 1
 @var checkbox enable_cm     'Enable right-click context menu' 1
 @var checkbox enable_la     'Enable removal of logged-out annoyances' 1
-@var checkbox custom_width  'Custom scrollbar width' 1
+@var checkbox sb_width      'Scrollbar thin width' 1
 @var select   sb_color      'Scrollbar colors' {
-        "None": "none",
-        "Theme default": "theme",
-        "With accent*": "accent"
-    }
+    'None         ': 'none',
+    'Old default  ': 'old',
+    'With accent *': 'new',
+}
 
 @var color    _dark      'Color: Primary background   ' #1f232a
 @var color    _darken    'Color: Highlight background ' #252A33
@@ -122,19 +122,20 @@ rad() { border-radius: arguments }
         --accent-rgb:  to_rgb(_accent);
         --shadow-rgb:  to_rgb(_shadow);
 
-        if ( custom_width == 1) {
+        /// Feat -> Scrollbar width.
+        if ( sb_width == 1) {
             /::-webkit-scrollbar { width: .5em }
             /\* { scrollbar-width: thin }
         }
 
-        /// Enable theme scrollbars.
-        if ( sb_color == "theme" ) {
+        /// Feat -> Theme scrollbars.
+        if ( sb_color == 'old' ) {
             /html { scrollbar-color: #88888840 #88888815; }
             /::-webkit-scrollbar {
                 c: 0 0 #88888815;
                 &-thumb { c: 0 0 #88888840 }
             }
-        } else if ( sb_color == "accent" ) {
+        } else if ( sb_color == 'new' ) {
             /html { scrollbar-color: var(--accent) #88888815; }
             /::-webkit-scrollbar {
                 c: 0 0 #88888815;
