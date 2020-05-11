@@ -56,5 +56,9 @@ Any contribution is greatly appreciated.
 If you really like the project and would like to tip me for my work, then you
 can buy me a coffee over at [[https://ko-fi.com/vednoc][ko-fi]] or support me over at [[https://liberapay.com/vednoc][LiberaPay]].
 
+** Credits
+Similar open-source projects:
+- [[https://github.com/obvionaoe/dark][obvionaoe/dark]] - Port of v2 CSS for Ferdi/Franz/Rambox (desktop apps)
+
 ** License
 Code released under the [[https://gitlab.com/vednoc/dark-instagram/license][MIT]] license.
