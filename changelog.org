@@ -1,7 +1,7 @@
 #+STARTUP: nofold
 
 * Changelog
-** 2.3.0 [2020-05-05]
+** 2.3.0 [2020-05-05 Tue]
 Minor bug fixes and interop with [[https://gitlab.com/vednoc/dark-switcher][dark-switcher]] userstyle.
 
 *** Added
@@ -12,13 +12,13 @@ Minor bug fixes and interop with [[https://gitlab.com/vednoc/dark-switcher][dark
 - Colors for followed hashtags
 - Colors for leaflets and links in settings
 
-** 2.2.1 [2020-04-25]
+** 2.2.1 [2020-04-25 Sat]
 Quick hotfix.
 
 *** Fixed
 - A bug that would hide all DMs
 
-** 2.2.0 [2020-04-25]
+** 2.2.0 [2020-04-25 Sat]
 More bug fixes and improvements!
 
 *** Improved
@@ -34,7 +34,7 @@ More bug fixes and improvements!
 - More of image-icon selectors
 - Default input placeholder colors
 
-** 2.1.0 [2020-04-21]
+** 2.1.0 [2020-04-21 Tue]
 Improving some things.
 
 *** Improved
@@ -48,5 +48,5 @@ Improving some things.
 - A bunch of non-SVG icons
 - Styles for 'profiles directory' page
 
-** 2.0.0 [2020-04-19]
+** 2.0.0 [2020-04-19 Sun]
 Rewritten everything from the scratch.
