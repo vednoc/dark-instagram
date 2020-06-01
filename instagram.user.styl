@@ -324,11 +324,21 @@ rad() { border-radius: arguments }
         /// Settings -> Fix borders | Profile -> Camera | Hashtags.
         .rb9ad, .-wdIA, .d-Vzv { c: 0 bd }
 
-        /// Settings -> Login activity -> Leaflet.
-        .leaflet-popup {
-            &-content-wrapper, &-tip {
+        /// Global -> Leaflet.
+        .leaflet {
+            /// Explore -> Locations.
+            &-container {
                 c: 0 0 hl;
-                box-shadow: 0 3px 14px sh;
+                box-shadow: 0 1px bd;
+                /// Invert map tiles.
+                ../-tile { filter: invert(0.9) hue-rotate(180deg) i }
+            }
+            /// Settings -> Login activity.
+            &-popup {
+                &-content-wrapper, &-tip {
+                    c: 0 0 hl;
+                    box-shadow: 0 3px 14px sh;
+                }
             }
         }
 
