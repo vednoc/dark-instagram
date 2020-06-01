@@ -6,7 +6,7 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.3.1
+@version      2.4.0
 @license      MIT
 ==/UserStyle== */
 
@@ -27,9 +27,11 @@
     --fe0: var(--accent-rgb);
     --d69: var(--accent-rgb);
     --c37: var(--accent-rgb);
+    --eca: var(--darken-rgb);
     --jb7: var(--shadow-rgb);
     --fa7: var(--darken-rgb);
-    --note: 'Dark-Instagram Lite v2.3.1';
+    --de5: var(--white-rgb);
+    --note: 'Dark-Instagram v2.4.0';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -58,6 +60,7 @@
     --lighter-rgb: 161,161,161;
     --accent-rgb: 114,137,218;
     --shadow-rgb: 0,0,0;
+    --white-rgb: 255,255,255;
   }
   ::-webkit-scrollbar {
     width: 0.5em;
@@ -151,6 +154,7 @@
   [class *= 'SpriteCamera'],
   [class *= 'SpriteProfileChannelNullState'],
   [class *= 'SpriteLocation_'],
+  [class *= 'SpriteInfo__filled__16__grey'],
   [class *= 'SpriteCircle_add'] {
     filter: invert(0.8) !important;
   }
@@ -226,6 +230,13 @@
   body .d-Vzv {
     border-color: var(--darker) !important;
   }
+  body .leaflet-container {
+    background-color: var(--darken) !important;
+    box-shadow: 0 1px var(--darker);
+  }
+  body .leaflet-tile {
+    filter: invert(0.9) hue-rotate(180deg) !important;
+  }
   body .leaflet-popup-content-wrapper,
   body .leaflet-popup-tip {
     background-color: var(--darken) !important;
@@ -272,6 +283,9 @@
   body > [role = 'presentation'] button.aOOlW:not(.SRPMb):hover,
   body > [role = 'presentation'] button.aOOlW:not(.SRPMb):active {
     background-color: var(--darken) !important;
+  }
+  body article > header + div .Yi5aA {
+    background-color: var(--lighter) !important;
   }
   body img + div[style = 'height: 100%;'] {
     position: unset !important;
