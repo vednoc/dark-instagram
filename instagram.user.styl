@@ -87,7 +87,6 @@ rad() { border-radius: arguments }
         --jb7: var(--shadow-rgb);     /// Emoji menu shadow.
         --fa7: var(--darken-rgb);     /// New message user.
         --de5: var(--white-rgb);      /// Badge text color.
-        --eca: var(--lighten-rgb);    /// Post pagination.
 
         /// Theme variables.
         --note      : 'Dark-Instagram v2.3.1';
@@ -250,6 +249,8 @@ rad() { border-radius: arguments }
                 /[class *= 'SpriteProfileChannelNullState'],
                 /// Settings -> Login activity.
                 /[class *= 'SpriteLocation_'],
+                /// Expore -> Leaflet info icon.
+                /[class *= 'SpriteInfo__filled__16__grey'],
                 /// Posts -> Load more messages.
                 /[class *= 'SpriteCircle_add'] {
                     filter: invert(0.8) i;
@@ -392,6 +393,9 @@ rad() { border-radius: arguments }
                 &:hover, &:active { c: 0 0 hl }
             }
         }
+
+        /// Posts -> Post pagination.
+        article > header + div .Yi5aA { c: 0 0 cm }
 
         /// Feat -> Enable right-click context menu.
         if ( enable_cm == 1 ) {
