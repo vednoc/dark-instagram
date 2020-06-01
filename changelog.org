@@ -1,6 +1,14 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.4.0 [2020-06-01 Mon]
+Fixed recently added things.
+
+*** Improved
+- A couple of new color variables
+- All maps will now have inverted colors
+- White color variable interop with [[https://gitlab.com/vednoc/dark-switcher][dark-switcher]]
+
 ** 2.3.1 [2020-05-18 Mon]
 Minor bug fixes and interop with [[https://gitlab.com/vednoc/dark-switcher][dark-switcher]] userstyle.
 
