@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name         Dark-Instagram Lite
 @namespace    gitlab.com/vednoc/dark-instagram
-@description  Customizable dark and light theme for Instagram.
+@description  Non-customizable version of Dark-Instagram.
 @author       vednoc <vednoc@pm.me> (https://gitlab.com/vednoc)
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.4.0
+@version      2.4.1
 @license      MIT
 ==/UserStyle== */
 
@@ -22,7 +22,7 @@
     --i1d: var(--light-rgb);
     --f75: var(--light-rgb);
     --f52: var(--lighter-rgb);
-    --bb2: var(--dark-rgb);
+    --bb2: var(--darken-rgb);
     --f23: var(--dark-rgb);
     --fe0: var(--accent-rgb);
     --d69: var(--accent-rgb);
@@ -31,7 +31,7 @@
     --jb7: var(--shadow-rgb);
     --fa7: var(--darken-rgb);
     --de5: var(--white-rgb);
-    --note: 'Dark-Instagram v2.4.0';
+    --note: 'Dark-Instagram Lite v2.4.1';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -171,14 +171,18 @@
   body .HZ802,
   body .nHGTw {
     color: var(--white) !important;
-    background-color: var(--red) !important;
+    background-color: var(--accent) !important;
   }
   body .HZ802 .H9zXO::after,
   body .nHGTw .H9zXO::after {
-    background-color: var(--red) !important;
+    background-color: var(--accent) !important;
   }
   .iMofo {
     box-shadow: 0 4px 16px var(--shadow) !important;
+  }
+  body .HZ802 [class *= 'Sprite'] + div > div,
+  body .nHGTw [class *= 'Sprite'] + div > div {
+    color: var(--white) !important;
   }
   body > [role = 'presentation'],
   body > [role = 'dialog'] {
