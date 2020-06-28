@@ -6,7 +6,7 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.4.1
+@version      2.4.2
 @license      MIT
 ==/UserStyle== */
 
@@ -31,7 +31,7 @@
     --jb7: var(--shadow-rgb);
     --fa7: var(--darken-rgb);
     --de5: var(--white-rgb);
-    --note: 'Dark-Instagram Lite v2.4.1';
+    --note: 'Dark-Instagram Lite v2.4.2';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -269,6 +269,9 @@
   body article + div + div.GZkEI {
     margin-top: 28px;
   }
+  button.Szr5J {
+    background-color: var(--darken) !important;
+  }
   body .WidCF,
   body .HaS-3 {
     border-right: 1px solid var(--darker);
@@ -281,15 +284,27 @@
     border: 1px solid var(--darker) !important;
     box-shadow: 0 0px 16px var(--darken);
   }
-  body > [role = 'presentation'] > [role = 'dialog'] {
+  body [role = 'dialog'] > article > header {
+    overflow-x: hidden !important;
+  }
+  body [role = 'dialog'] > article > header + div {
+    --jb7: var(--dark-rgb);
+  }
+  [style *= 'max-width'] > article > header + div {
+    --b3f: var(--dark-rgb);
+  }
+  [style *= 'max-width'] > article > header + div ._5wCQW {
+    background-color: var(--dark) !important;
+  }
+  body > [role = 'presentation'] > [role = 'dialog'] > div {
     border: 1px solid var(--darker) !important;
   }
   body > [role = 'presentation'] button.aOOlW:not(.SRPMb):hover,
   body > [role = 'presentation'] button.aOOlW:not(.SRPMb):active {
     background-color: var(--darken) !important;
   }
-  body article > header + div .Yi5aA {
-    background-color: var(--lighter) !important;
+  body article > header + div .WXPwG .Yi5aA {
+    background-color: var(--white) !important;
   }
   body img + div[style = 'height: 100%;'] {
     position: unset !important;
