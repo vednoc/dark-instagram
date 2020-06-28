@@ -1,6 +1,13 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.4.2 [2020-06-28 Sun]
+Minor update for colors around content areas.
+
+*** Improved
+- Colors for default backgorund in post area
+- Colors for various small elements
+
 ** 2.4.1 [2020-06-27 Sat]
 Minor update for colors.
 
