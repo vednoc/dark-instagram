@@ -124,23 +124,26 @@ rad() { border-radius: arguments }
         --jb7: var(--shadow-rgb);     /// Emoji menu shadow.
         --fa7: var(--darken-rgb);     /// New message user.
         --de5: var(--white-rgb);      /// Badge text color.
+    }
 
-        /// Feat -> Scrollbar width.
+    /// Feat -> Scrollbars.
+    /{
+        /// Width.
         if ( sb_width == 1) {
-            /::-webkit-scrollbar { width: .5em }
-            /\* { scrollbar-width: thin }
+            ::-webkit-scrollbar { width: 0.5em }
+            * { scrollbar-width: thin }
         }
 
-        /// Feat -> Theme scrollbars.
-        if ( sb_color == 'old' ) {
-            /html { scrollbar-color: #88888840 #88888815; }
-            /::-webkit-scrollbar {
+        /// Colors.
+        if (sb_color == 'old') {
+            html { scrollbar-color: #88888840 #88888815 }
+            ::-webkit-scrollbar {
                 c: 0 0 #88888815;
                 &-thumb { c: 0 0 #88888840 }
             }
-        } else if ( sb_color == 'new' ) {
-            /html { scrollbar-color: var(--accent) #88888815; }
-            /::-webkit-scrollbar {
+        } else if (sb_color == 'new') {
+            html { scrollbar-color: var(--accent) #88888815 }
+            ::-webkit-scrollbar {
                 c: 0 0 #88888815;
                 &-thumb { c: 0 0 var(--accent) }
             }
