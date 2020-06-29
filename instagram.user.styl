@@ -67,27 +67,6 @@ rad() { border-radius: arguments }
 
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
     :root {
-        /// Instagram variables.
-        --b6a: var(--darker-rgb);     /// Global border colors.
-        --b38: var(--darker-rgb);     /// Profile border colors.
-        --ce3: var(--darker-rgb);     /// Post border colors.
-        --ca6: var(--darker-rgb);     /// Login border colors.
-        --d87: var(--darken-rgb);     /// Highlighted background.
-        --f23: var(--darken-rgb);     /// 'New Posts' button.
-        --b3f: var(--dark-rgb);       /// Primary background.
-        --i1d: var(--light-rgb);      /// Main text color.
-        --f75: var(--light-rgb);      /// Primary text.
-        --f52: var(--lighter-rgb);    /// Secondary text.
-        --bb2: var(--darken-rgb);     /// Post placeholder.
-        --f23: var(--dark-rgb);       /// Dialogs.
-        --fe0: var(--accent-rgb);     /// Links.
-        --d69: var(--accent-rgb);     /// Post/login button.
-        --c37: var(--accent-rgb);     /// Notifications.
-        --eca: var(--darken-rgb);     /// New feature alert.
-        --jb7: var(--shadow-rgb);     /// Emoji menu shadow.
-        --fa7: var(--darken-rgb);     /// New message user.
-        --de5: var(--white-rgb);      /// Badge text color.
-
         /// Theme variables.
         --note      : 'Dark-Instagram v2.4.2';
         --bshadow   : 0 2px 4px var(--shadow);
@@ -124,6 +103,27 @@ rad() { border-radius: arguments }
         --accent-rgb:  to_rgb(_accent);
         --shadow-rgb:  to_rgb(_shadow);
         --white-rgb:   to_rgb(_white);
+
+        /// Instagram variables.
+        --b6a: var(--darker-rgb);     /// Global border colors.
+        --b38: var(--darker-rgb);     /// Profile border colors.
+        --ce3: var(--darker-rgb);     /// Post border colors.
+        --ca6: var(--darker-rgb);     /// Login border colors.
+        --d87: var(--darken-rgb);     /// Highlighted background.
+        --f23: var(--darken-rgb);     /// 'New Posts' button.
+        --b3f: var(--dark-rgb);       /// Primary background.
+        --i1d: var(--light-rgb);      /// Main text color.
+        --f75: var(--light-rgb);      /// Primary text.
+        --f52: var(--lighter-rgb);    /// Secondary text.
+        --bb2: var(--darken-rgb);     /// Post placeholder.
+        --f23: var(--dark-rgb);       /// Dialogs.
+        --fe0: var(--accent-rgb);     /// Links.
+        --d69: var(--accent-rgb);     /// Post/login button.
+        --c37: var(--accent-rgb);     /// Notifications.
+        --eca: var(--darken-rgb);     /// New feature alert.
+        --jb7: var(--shadow-rgb);     /// Emoji menu shadow.
+        --fa7: var(--darken-rgb);     /// New message user.
+        --de5: var(--white-rgb);      /// Badge text color.
 
         /// Feat -> Scrollbar width.
         if ( sb_width == 1) {
