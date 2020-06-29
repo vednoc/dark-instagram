@@ -1,6 +1,16 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.5.0 [2020-06-29 Mon]
+Fixed conflicts with posts and refactored some styles.
+
+*** Improved
+- Moved theme variables to the top
+- Refactored styles for scrollbar options
+
+*** Fixed
+- Conflicts with the latest update in post area
+
 ** 2.4.2 [2020-06-28 Sun]
 Minor update for colors around content areas.
 
