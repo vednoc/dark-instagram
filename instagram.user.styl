@@ -362,11 +362,12 @@ rad() { border-radius: arguments }
             box-shadow: bsh i;
         }
 
-        /// Posts -> Related accounts.
-        article + div + div.GZkEI {
-            margin-top: 28px;
-            /// Buttons.
-            /button.Szr5J { c: 0 0 hl i }
+        /// Profile/Posts -> Related accounts.
+        header + div, article + div {
+            + div.GZkEI {
+                /// Suggested accounts.
+                li[style] > div > div > [role] { --d87: var(--dark-rgb) }
+            }
         }
 
         /// Posts -> Invert loading image.
@@ -389,11 +390,7 @@ rad() { border-radius: arguments }
             > article > header {
                 overflow-x: hidden i;
                 /// Post area background.
-                + div { --jb7: var(--dark-rgb) }
-                /[style *= 'max-width'] > article > header + div {
-                    --b3f: var(--dark-rgb)
-                    ._5wCQW { c: 0 0 bg }
-                }
+                + div { --jb7: var(--darken-rgb) }
             }
         }
 
