@@ -1,6 +1,13 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.5.1 [2020-08-10 Mon]
+Minor update to fix broken colors.
+
+*** Fixed
+- Updated broken colors in Direct Messages
+- Updated colors for post pagination
+
 ** 2.5.0 [2020-06-29 Mon]
 Fixed conflicts with posts and refactored some styles.
 
