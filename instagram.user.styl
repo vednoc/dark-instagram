@@ -446,11 +446,17 @@ rad() { border-radius: arguments }
             .DPiy6 { c: 0 0 t }
         }
 
+        /// DMs -> Active chat.
+        .QOqBd { c: 0 0 bd }
+
         /// DMs -> Input bar.
         /.X3a-9 { c: 0 0 bg }
 
-        /// DMs -> Left message.
-        .CMoMH:not(._6FEQj) { c: 0 0 #00000010 }
+        /// DMs -> Message bubbles.
+        .CMoMH {
+            &:not(._6FEQj) { c: 0 0 bg }
+            &._6FEQj { c: 0 0 bd }
+        }
 
         /// Footer -> Sent message.
         .XjicZ {
