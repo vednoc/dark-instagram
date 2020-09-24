@@ -1,6 +1,15 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.6.0 [2020-09-24 Thu]
+Small maintenance update. Preparing for =3.0.0= release which will use the
+procedural color generator from my other userstyles.
+
+*** Improved
+- Rewrite for footera area to fix a couple of edge-cases
+- Removed conflicting background for follower/following lists
+- Simplified conditionals and mixins
+
 ** 2.5.1 [2020-08-10 Mon]
 Minor update to fix broken colors.
 
