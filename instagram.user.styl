@@ -467,15 +467,23 @@ rad() { border-radius: arguments }
 
         /// Footer.
         footer {
-            /// -> Width tweaks.
+            margin: 0 auto
+            max-width: 975px i
+
+            /// Width tweaks.
             nav {
-                width: 100% i;
-                max-width: 80% i;
+                width: 100% i
+                display: flex
+                text-align: center
             }
-            /// -> Copyright.
+
+            /// Copyright.
             nav + span, /.copyright {
-                font-size: 0 i;
+                margin: 2rem auto 0
+                display: block
+                font-size: 0 i
                 c: cm;
+
                 &::before {
                     content: '🌚 ' var(--note) i;
                     font-size: 14px i;
