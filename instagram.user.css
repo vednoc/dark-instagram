@@ -6,13 +6,13 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.5.1
+@version      2.6.0
 @license      MIT
 ==/UserStyle== */
 
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
   :root {
-    --note: 'Dark-Instagram Lite v2.5.1';
+    --note: 'Dark-Instagram Lite v2.6.0';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -147,6 +147,7 @@
   [class *= 'SpriteMail'],
   [class *= 'SpriteApp'],
   [class *= 'Spritez'],
+  [class *= 'SpriteKeyhole'],
   [class *= 'SpriteFriend_'],
   [class *= 'SpriteAdd_friend_'],
   [class *= 'SpriteDropdownArrowGrey'],
@@ -224,6 +225,9 @@
   }
   body .hI7cq {
     color: var(--light) !important;
+  }
+  body .isgrP > ul {
+    background-color: var(--t) !important;
   }
   body ._7LpC8 a,
   body .rin8p {
@@ -359,12 +363,19 @@
   body .XjicZ p {
     color: var(--light) !important;
   }
+  body footer {
+    margin: 0 auto;
+    max-width: 975px !important;
+  }
   body footer nav {
     width: 100% !important;
-    max-width: 80% !important;
+    display: flex;
+    text-align: center;
   }
   body footer nav + span,
   .copyright {
+    margin: 2rem auto 0;
+    display: block;
     font-size: 0 !important;
     color: var(--lighter) !important;
   }
