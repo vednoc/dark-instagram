@@ -40,21 +40,22 @@
 @var color    _shadow    'Color: Shadow               ' #00000025
 ==/UserStyle== */
 
+i       = !important
+vendors = official
+
 // Color mixin.
-/// All colors: `c: fg bd bg;`
-/// Only border-color: `c: 0 bd;`
+/// All colors: `c: fg1 bg5 bg1`
+/// Only border-color: `c: 0 bg5`
 c(x, y = 0, z = 0, xi = 1, yi = 1, zi = 1) {
-    i = !important;
-    if x is a 'call' or x is a 'rgba' {            color: xi is 0? x : x i }
-    if y is a 'call' or y is a 'rgba' {     border-color: yi is 0? y : y i }
-    if z is a 'call' or z is a 'rgba' { background-color: zi is 0? z : z i }
+    if x != 0 && x != '_' {            color: xi is 0 ? x : x i }
+    if y != 0 && y != '_' {     border-color: yi is 0 ? y : y i }
+    if z != 0 && z != '_' { background-color: zi is 0 ? z : z i }
 }
 
 // SVG colors.
 v(x, y = 0, xi = 1, yi = 1) {
-    i = !important;
-    if x is a 'call' or x is a 'rgba' {   fill: xi is 0? x : x i }
-    if y is a 'call' or y is a 'rgba' { stroke: yi is 0? y : y i }
+    if x != 0 && x != '_' {   fill: xi is 0 ? x : x i }
+    if y != 0 && x != '_' { stroke: yi is 0 ? y : y i }
 }
 
 // HACK: Convert HEX to RGB.
@@ -70,7 +71,7 @@ rad() { border-radius: arguments }
         /// Theme variables.
         --note      : 'Dark-Instagram v2.5.1';
         --bshadow   : 0 2px 4px var(--shadow);
-        --t         : transparent !important;
+        --t         : transparent i
         --avatar    : a_radius;
         --ui-font   : ui_font, -apple-system, BlinkMacSystemFont, 'Segoe UI',
             Roboto, Helvetica, Arial, Ubuntu, Cantarell, 'Noto Sans',
@@ -129,7 +130,7 @@ rad() { border-radius: arguments }
     /// Feat -> Scrollbars.
     /{
         /// Width.
-        if ( sb_width == 1) {
+        if (sb_width) {
             ::-webkit-scrollbar { width: 0.5em }
             * { scrollbar-width: thin }
         }
@@ -171,8 +172,6 @@ rad() { border-radius: arguments }
     t       = var(--t);
     outer   = 0 0 0 1px bd;
     inner   = inset outer;
-    i       = !important;
-    vendors = official;
 
     /// Loader animation.
     @keyframes Loader {
@@ -203,7 +202,7 @@ rad() { border-radius: arguments }
         &[class *= 'error'], &[class *= '404'] {
             .top-bar {
                 c: fg bd hl;
-                if ( ic_invert == 1 ) {
+                if (ic_invert) {
                     .logo { filter: invert(0.8) i }
                 }
             }
@@ -224,7 +223,7 @@ rad() { border-radius: arguments }
         }
 
         /// Feat -> Icon inversion in dark mode.
-        if ( ic_invert == 1 ) {
+        if (ic_invert) {
             .coreSprite {
                 &LoggedOutWordmark,
                 &MobileNavDirect,
@@ -271,7 +270,7 @@ rad() { border-radius: arguments }
         ._2Lks6 { c: ac }
 
         /// Navbar -> Invert IG logo.
-        if ( ic_invert == 1 ) {
+        if (ic_invert) {
             nav a[href = '/'] img {
                 &, /[src *= 'logo.png'] { filter: invert(0.8) }
             }
@@ -291,7 +290,7 @@ rad() { border-radius: arguments }
         }
 
         /// Feat -> Remove logged-out annoyances.
-        if ( enable_la == 1 ) {
+        if (enable_la) {
             /.not-logged-in {
                 /// Remove login/signup bar.
                 .N9d2H { display: none i }
@@ -379,7 +378,7 @@ rad() { border-radius: arguments }
         }
 
         /// Posts -> Invert loading image.
-        if ( ic_invert == 1 ) {
+        if (ic_invert) {
             .WidCF, .HaS-3 {
                 border-right: 1px solid bd;
                 background-size: 200% 200% i;
@@ -415,7 +414,7 @@ rad() { border-radius: arguments }
         article > header ~ div .WXPwG .Yi5aA { c: 0 0 white }
 
         /// Feat -> Enable right-click context menu.
-        if ( enable_cm == 1 ) {
+        if (enable_cm) {
             /// Stories -> Images.
             img + div[style = 'height: 100%;'] {
                 position: unset i;
