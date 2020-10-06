@@ -67,7 +67,7 @@ Minor bug fixes and interop with [[https://gitlab.com/vednoc/dark-switcher][dark
 Minor bug fixes and interop with [[https://gitlab.com/vednoc/dark-switcher][dark-switcher]] userstyle.
 
 *** Added
-- Options to change scrollbar width and colors ([[https://github.com/vednoc/dark-instagram/pull/2][#2]])
+- Options to change scrollbar width and colors ([[https://github.com/vednoc/dark-instagram/pull/2][#2 on GitHub]])
 - Integration with color-schemes from dark-switcher (=v1.2=)
 
 *** Fixed
