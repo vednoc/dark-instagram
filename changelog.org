@@ -1,6 +1,19 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.7.0 [2020-10-06 Tue]
+Splitting options for right-click context menus in stories/posts, and making
+footer styles more uniform across different screen sizes.
+
+*** Documentation
+- Added missing link for a contribution in =2.3.0= release
+
+*** Added
+- Split option for right-click context menu into two ([[https://gitlab.com/vednoc/dark-instagram/-/issues/2][#2 on GitLab]])
+
+*** Improved
+- Styles for footer area are more uniform across different screen sizes
+
 ** 2.6.0 [2020-09-24 Thu]
 Small maintenance update. Preparing for =3.0.0= release which will use the
 procedural color generator from my other userstyles.
