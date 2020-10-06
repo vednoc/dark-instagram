@@ -13,7 +13,8 @@
 @var text     ui_font       'Custom UI font' '"font_name"'
 @var text     emoji_font    'Custom emoji font' '"font_name"'
 @var checkbox ic_invert     'Enable icon inversion in dark mode' 1
-@var checkbox enable_cm     'Enable right-click context menu' 1
+@var checkbox enable_cm_s   'Enable right-click context menu in stories' 1
+@var checkbox enable_cm_p   'Enable right-click context menu in posts' 1
 @var checkbox enable_la     'Enable removal of logged-out annoyances' 1
 @var checkbox sb_width      'Scrollbar thin width' 1
 @var select   sb_color      'Scrollbar colors' {
@@ -413,8 +414,8 @@ rad() { border-radius: arguments }
         /// Posts -> Post pagination.
         article > header ~ div .WXPwG .Yi5aA { c: 0 0 white }
 
-        /// Feat -> Enable right-click context menu.
-        if (enable_cm) {
+        /// Feat -> Enable right-click context menu in stories.
+        if (enable_cm_s) {
             /// Stories -> Images.
             img + div[style = 'height: 100%;'] {
                 position: unset i;
@@ -422,6 +423,10 @@ rad() { border-radius: arguments }
             }
             /// Stores -> Videos.
             /.GHEPc { .B20bj, .z6Odz, .i0EQd { display: none }}
+        }
+
+        /// Feat -> Enable right-click context menu in posts.
+        if (enable_cm_p) {
             /// Posts -> Images.
             ._9AhH0 { position: unset i }
             /// Posts -> Videos.
