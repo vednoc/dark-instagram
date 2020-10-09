@@ -353,15 +353,12 @@ rad() { border-radius: arguments }
             }
         }
 
-        /// Stories -> 'Send message' area.
+        /// Stories -> Reset 'Send message' area.
         .Sux9m {
-            c: 0 #555 #111;
-            /// Reset input placeholders and send button.
+            c: 0 0 #eee2
+            --eca: var(--light-rgb)
             ::placeholder { c: #eee }
             ::-webkit-input-placeholder { c: #eee }
-            + div [class *= 'SpriteDirect'] { filter: invert(0.6) i }
-            /// Story loader background.
-            /._2WZC0 canvas { filter: invert(1) i }
         }
 
         /// Posts -> 'New Posts' button.
