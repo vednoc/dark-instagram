@@ -6,13 +6,13 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.7.0
+@version      2.8.0
 @license      MIT
 ==/UserStyle== */
 
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
   :root {
-    --note: 'Dark-Instagram Lite v2.7.0';
+    --note: 'Dark-Instagram Lite v2.8.0';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -251,8 +251,8 @@
     box-shadow: 0 3px 14px var(--shadow);
   }
   body .Sux9m {
-    border-color: #555 !important;
-    background-color: #111 !important;
+    background-color: rgba(238,238,238,0.133) !important;
+    --eca: var(--light-rgb);
   }
   body .Sux9m ::placeholder {
     color: #eee !important;
@@ -260,15 +260,20 @@
   body .Sux9m ::-webkit-input-placeholder {
     color: #eee !important;
   }
-  body .Sux9m + div [class *= 'SpriteDirect'] {
-    filter: invert(0.6) !important;
-  }
-  ._2WZC0 canvas {
-    filter: invert(1) !important;
-  }
   body .tCibT {
     border: 1px solid var(--darker) !important;
     box-shadow: var(--bshadow) !important;
+  }
+  .R8iOs {
+    border: 1px solid var(--darker) !important;
+    color: var(--light) !important;
+    background-color: var(--dark) !important;
+  }
+  .R8iOs > * {
+    color: inherit;
+  }
+  [role='button'] + span[class=''] > div[class] {
+    background-color: var(--darker) !important;
   }
   body header + div + div.GZkEI li[style] > div > div > [role],
   body article + div + div.GZkEI li[style] > div > div > [role] {
