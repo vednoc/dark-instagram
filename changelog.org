@@ -1,6 +1,14 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.8.0 [2020-10-09 Fri]
+Rewriting styles for stories and fixing misc colors for posts.
+
+*** Fixed
+- Removed invert filter when a story is loading
+- Added text and background colors for 'Send message' area
+- Added colors for mute/unmute button and 'Video has no sound' alert
+
 ** 2.7.0 [2020-10-06 Tue]
 Splitting options for right-click context menus in stories/posts, and making
 footer styles more uniform across different screen sizes.
