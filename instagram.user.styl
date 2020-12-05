@@ -374,8 +374,8 @@ rad() { border-radius: arguments }
             c: fg 0 bg
             > * { color: inherit }
 
-            /// Posts -> (Un)mute button.
-            /[role='button'] + span[class=''] > div[class] { c: 0 0 bd }
+            /// Posts -> (Un)mute / Tagged button.
+            /[role='button'] + span[class=''] > div[class], /.G_hoz { c: 0 0 bd }
         }
 
         /// Profile/Posts -> Related accounts.
@@ -437,9 +437,8 @@ rad() { border-radius: arguments }
             /// Posts -> Images.
             ._9AhH0 { position: unset i }
             /// Posts -> Videos.
+            /// NOTE: This will allow you to right-click on the bottom 40px.
             .PyenC, .fXIG0 { bottom: 40px i }
-            /// Posts -> Hide video preview image.
-            ._8jZFn { position: unset i }
         }
 
         /// Page -> Profiles directory.
