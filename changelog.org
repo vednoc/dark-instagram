@@ -1,6 +1,19 @@
 #+STARTUP: nofold
 
 * Changelog
+** 2.9.0 [2020-12-05 Sat]
+Maintenance release to fix broken selectors.
+
+*** Improved
+- Switched to darker color variable for modal's backdrop
+- Simplified tweaks for footer area and removed its obsolete styles
+
+*** Fixed
+- Updated colors for input area/icon in stories
+- Updated selectors for context menu option in stories
+- Resolved a conflict with thumbnails of videos in posts
+- Added theme backaground color to "tagged" button in posts
+
 ** 2.8.0 [2020-10-09 Fri]
 Rewriting styles for stories and fixing misc colors for posts.
 
