@@ -70,7 +70,7 @@ rad() { border-radius: arguments }
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
     :root {
         /// Theme variables.
-        --note      : 'Dark-Instagram v2.8.0';
+        --note      : '🌚 Dark-Instagram v2.8.0'
         --bshadow   : 0 2px 4px var(--shadow);
         --t         : transparent i
         --avatar    : a_radius;
@@ -483,34 +483,18 @@ rad() { border-radius: arguments }
         /// Footer.
         footer {
             width: 100% i
-            margin: 0 auto
-            margin-top: 2rem i
+            margin: 0 auto i
             max-width: 935px i
             border-top: 1px solid bd i
 
-            > div {
-                padding: 2rem 0 3rem i
-            }
+            /// Settings -> Add whitespace between sections.
+            /.XfvCs { margin-bottom: 30px i }
 
-            /// Width tweaks.
-            nav {
-                width: 100% i
-                display: flex
+            /// Add userstyle information.
+            > div::after {
+                content: var(--note)
                 text-align: center
-            }
-
-            /// Copyright.
-            nav + span, /.copyright {
-                margin: 3rem auto 0
-                display: block
-                font-size: 0 i
-                c: fg
-
-                &::before {
-                    content: '🌚 ' var(--note) i;
-                    font-size: 14px i;
-                    text-transform: initial i;
-                }
+                margin-top: 2rem
             }
         }
     }
