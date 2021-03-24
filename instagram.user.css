@@ -375,6 +375,13 @@
   .XfvCs {
     margin-bottom: 30px !important;
   }
+  .sqdOP{
+    color:#fff !important
+  }
+  .M8ipN{
+    color:#fff !important
+  }
+    
   body footer > div::after {
     content: var(--note);
     text-align: center;
