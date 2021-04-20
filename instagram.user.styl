@@ -68,9 +68,12 @@ to_rgb(input) {
 rad() { border-radius: arguments }
 
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
+    note ?= 'Switching @updateURL to https://userstyles.world platform!\A\A'
+    note += '🌚 Dark-Instagram v2.9.0'
+
+    /// Theme variables.
     :root {
-        /// Theme variables.
-        --note      : '🌚 Dark-Instagram v2.9.0'
+        --note      : note
         --bshadow   : 0 2px 4px var(--shadow);
         --t         : transparent i
         --avatar    : a_radius;
@@ -502,6 +505,7 @@ rad() { border-radius: arguments }
             /// Add userstyle information.
             > div::after {
                 content: var(--note)
+                white-space: pre-wrap
                 text-align: center
                 margin-top: 2rem
             }
