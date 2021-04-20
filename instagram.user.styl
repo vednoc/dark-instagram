@@ -463,7 +463,7 @@ rad() { border-radius: arguments }
 
         /// DMs -> Active chat.
         .QOqBd { c: 0 0 bd }
- 
+
         /// DMs -> Input bar.
         /.X3a-9 { c: 0 0 bg }
 
@@ -472,12 +472,12 @@ rad() { border-radius: arguments }
             &:not(._6FEQj) { c: 0 0 bg }
             &._6FEQj { c: 0 0 bd }
         }
-        /// DMs -> Message options
-        .sqdOP{
-            color:#fff !important
-         }
-        .M8ipN{
-            color:#fff !important
+
+        /// DMs -> Context menu items.
+        [role='listbox'] [aria-hidden='false'] > {
+            [style*='left: calc('] + div {
+                --eca: var(--white-rgb) i
+            }
         }
 
         /// Footer -> Sent message.
