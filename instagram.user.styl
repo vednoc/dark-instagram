@@ -224,6 +224,15 @@ rad() { border-radius: arguments }
                 transition: fill-opacity 0.2s ease;
                 ../:hover path { fill-opacity: 0.6 }
             }
+
+            // Default colors.
+            &[fill="#8e8e8e"] {
+                c: cm
+                v: cm
+            }
+
+            // Hover colors.
+            &[fill="#262626"] { c: fg }
         }
 
         /// Feat -> Icon inversion in dark mode.
