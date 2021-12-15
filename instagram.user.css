@@ -6,13 +6,13 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.9.1
+@version      2.9.2
 @license      MIT
 ==/UserStyle== */
 
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
   :root {
-    --note: 'Switching @updateURL to https://userstyles.world platform!\A\A🌚 Dark-Instagram v2.9.1';
+    --note: 'Switching @updateURL to https://userstyles.world platform!\A\A🌚 Dark-Instagram v2.9.2';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -135,6 +135,13 @@
   }
   body svg:hover path {
     fill-opacity: 0.6;
+  }
+  body svg[fill="#8e8e8e"] {
+    color: var(--lighter) !important;
+    fill: var(--lighter) !important;
+  }
+  body svg[fill="#262626"] {
+    color: var(--light) !important;
   }
   body .coreSpriteLoggedOutWordmark,
   body .coreSpriteMobileNavDirect,
