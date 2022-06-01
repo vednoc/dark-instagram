@@ -72,7 +72,7 @@ rad() { border-radius: arguments }
     note += '🌚 Dark-Instagram v2.9.2'
 
     /// Theme variables.
-    :root {
+    *:not(#z) {
         --note      : note
         --bshadow   : 0 2px 4px var(--shadow);
         --t         : transparent i
@@ -109,7 +109,7 @@ rad() { border-radius: arguments }
         --shadow-rgb:  to_rgb(_shadow);
         --white-rgb:   to_rgb(_white);
 
-        /// Instagram variables.
+        /// Old Instagram variables.
         --b6a: var(--darker-rgb);     /// Global border colors.
         --b38: var(--darker-rgb);     /// Profile border colors.
         --ce3: var(--darker-rgb);     /// Post border colors.
@@ -129,6 +129,26 @@ rad() { border-radius: arguments }
         --jb7: var(--shadow-rgb);     /// Emoji menu shadow.
         --fa7: var(--darken-rgb);     /// New message user.
         --de5: var(--white-rgb);      /// Badge text color.
+
+        /// New Instagram variables.
+        --ig-link: var(--accent-rgb)                    // Link text.
+        --ig-primary-text: to_rgb(_light)               // Main text.
+        --ig-secondary-text: var(--lighter-rgb)         // Dimmed text.
+        --ig-tertiary-text: var(--lighter-rgb)          // Tertiary text.
+        --ig-text-on-color: var(--white-rgb)            // Text on color.
+        --ig-text-on-media: var(--dark-rgb)             // Text on media.
+        --ig-primary-background: var(--darken-rgb)      // Alt background.
+        --ig-secondary-background: var(--dark-rgb)      // Main background.
+        --ig-highlight-background: var(--darker-rgb)    // Highlighted background.
+        --ig-elevated-background: var(--darken-rgb)     // Elevated background.
+        --ig-elevated-separator: var(--darker-rgb)      // Navbar border color.
+        --ig-primary-text: var(--light-rgb)             // Main text color.
+        --ig-primary-button: var(--accent-rgb)          // Not yet sure.
+        --ig-secondary-button: var(--light-rgb)         // Profile links.
+        --ig-badge: var(--accent-rgb)                   // Notifications.
+        --ig-separator: var(--darker-rgb)               // Global borders.
+        --post-separator: var(--darker-rgb)             // Post borders.
+        --ig-stroke: var(--darker-rgb)                  // Card borders.
     }
 
     /// Feat -> Scrollbars.
@@ -286,9 +306,12 @@ rad() { border-radius: arguments }
 
         /// Navbar -> Invert IG logo.
         if (ic_invert) {
-            nav a[href = '/'] img {
-                &, /[src *= 'logo.png'] { filter: invert(0.8) }
+            a[href='/'] > div > div  {
+                > i[role='img'], img[src*='logo.png'] { filter: invert(0.8) }
             }
+
+            // Login page.
+            i[role='img'], img[src*='out_wordmark.png'] { filter: invert(0.8) }
         }
 
         /// Navbar -> Followers.
@@ -455,6 +478,9 @@ rad() { border-radius: arguments }
             .PyenC, .fXIG0 { bottom: 40px i }
         }
 
+        /// Posts -> Chevron buttons.
+        ._a3gq ._aaqh { c: red 0 cm }
+
         /// Page -> Profiles directory.
         .GBPOY {
             rad: 3px;
@@ -516,7 +542,7 @@ rad() { border-radius: arguments }
                 content: var(--note)
                 white-space: pre-wrap
                 text-align: center
-                margin-top: 2rem
+                margin-top: 1rem
             }
         }
     }
