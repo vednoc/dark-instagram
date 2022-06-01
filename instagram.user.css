@@ -6,13 +6,13 @@
 @homepageURL  https://gitlab.com/vednoc/dark-instagram
 @supportURL   https://gitlab.com/vednoc/dark-instagram/issues
 @updateURL    https://gitlab.com/vednoc/dark-instagram/raw/master/instagram.user.css
-@version      2.9.2
+@version      2.9.3
 @license      MIT
 ==/UserStyle== */
 
 @-moz-document regexp('^https?://(www\.)?instagram\.com(/.*)?$') {
-  :root {
-    --note: 'Switching @updateURL to https://userstyles.world platform!\A\A🌚 Dark-Instagram v2.9.2';
+  *:not(#z) {
+    --note: 'Switching @updateURL to https://userstyles.world platform!\A\A🌚 Dark-Instagram v2.9.3';
     --bshadow: 0 2px 4px var(--shadow);
     --t: transparent !important;
     --avatar: a_radius;
@@ -61,6 +61,25 @@
     --jb7: var(--shadow-rgb);
     --fa7: var(--darken-rgb);
     --de5: var(--white-rgb);
+    --ig-link: var(--accent-rgb);
+    --ig-primary-text: 233,233,233;
+    --ig-secondary-text: var(--lighter-rgb);
+    --ig-tertiary-text: var(--lighter-rgb);
+    --ig-text-on-color: var(--white-rgb);
+    --ig-text-on-media: var(--dark-rgb);
+    --ig-primary-background: var(--darken-rgb);
+    --ig-secondary-background: var(--dark-rgb);
+    --ig-highlight-background: var(--darker-rgb);
+    --ig-elevated-background: var(--darken-rgb);
+    --ig-elevated-separator: var(--darker-rgb);
+    --ig-primary-text: var(--light-rgb);
+    --ig-primary-button: var(--accent-rgb);
+    --ig-secondary-button: var(--light-rgb);
+    --ig-badge: var(--accent-rgb);
+    --ig-separator: var(--darker-rgb);
+    --post-separator: var(--darker-rgb);
+    --ig-stroke: var(--darker-rgb);
+    --font-family-system: var(--ui-font) !important;
   }
   ::-webkit-scrollbar {
     width: 0.5em;
@@ -86,12 +105,6 @@
   }
   body ::-webkit-input-placeholder {
     color: var(--lighter) !important;
-  }
-  body,
-  body button,
-  body input,
-  body textarea {
-    font-family: var(--ui-font) !important;
   }
   body[style *= 'background: white'] {
     background-color: var(--dark) !important;
@@ -173,8 +186,12 @@
   body ._2Lks6 {
     color: var(--accent) !important;
   }
-  body nav a[href = '/'] img,
-  [src *= 'logo.png'] {
+  body a[href='/'] > div > div > i[role='img'],
+  body a[href='/'] > div > div img[src*='logo.png'] {
+    filter: invert(0.8);
+  }
+  body i[role='img'],
+  body img[src*='out_wordmark.png'] {
     filter: invert(0.8);
   }
   body .HZ802,
@@ -332,6 +349,10 @@
   body .fXIG0 {
     bottom: 40px !important;
   }
+  body ._a3gq ._aaqh {
+    color: var(--red) !important;
+    background-color: var(--lighter) !important;
+  }
   body .GBPOY {
     border-radius: 3px;
     border-color: var(--darker) !important;
@@ -388,8 +409,9 @@
   }
   body footer > div::after {
     content: var(--note);
+    white-space: pre-wrap;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   @keyframes Loader {
     0% {
