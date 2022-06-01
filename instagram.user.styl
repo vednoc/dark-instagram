@@ -14,8 +14,8 @@
 @var text     emoji_font    'Custom emoji font' '"font_name"'
 @var checkbox ic_invert     'Enable icon inversion in dark mode' 1
 @var checkbox enable_cm_s   'Enable right-click context menu in stories' 1
-@var checkbox enable_cm_p   'Enable right-click context menu in posts' 1
-@var checkbox enable_la     'Enable removal of logged-out annoyances' 1
+@var checkbox enable_cm_p   '[Broken] Enable right-click context menu in posts' 1
+@var checkbox enable_la     '[Broken] Enable removal of logged-out annoyances' 1
 @var checkbox sb_width      'Scrollbar thin width' 1
 @var select   sb_color      'Scrollbar colors' {
     'None         ': 'none',
@@ -149,6 +149,9 @@ rad() { border-radius: arguments }
         --ig-separator: var(--darker-rgb)               // Global borders.
         --post-separator: var(--darker-rgb)             // Post borders.
         --ig-stroke: var(--darker-rgb)                  // Card borders.
+
+        /// Feat -> Custom UI font.
+        --font-family-system: var(--ui-font) i
     }
 
     /// Feat -> Scrollbars.
@@ -210,11 +213,6 @@ rad() { border-radius: arguments }
 
         ::placeholder { c: cm }
         ::-webkit-input-placeholder { c: cm }
-
-        /// Feat -> Custom UI font.
-        &, button, input, textarea {
-            font-family: var(--ui-font) i;
-        }
 
         /// Loading.
         &[style *= 'background: white'] {
